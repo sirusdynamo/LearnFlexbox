@@ -102,13 +102,24 @@
                     .side-nav {
                         font-size: 1.4rem;
                         margin-top: 3.5rem;
+                        @media only screen and(max-width: $bp-medium) {
+                            display: flex;
+                            margin: 0;
+                            // min-width: 100%;
+                        }
                         &__item {
                             list-style: none;
                             position: relative;
                             &:not(:last-child) {
                                 margin-bottom: 0.6rem;
+                                @media only screen and(max-width: $bp-medium) {
+                                    margin: 0;
+                                    margin-right: 2px;
+                                }
                             }
-                            // transition: all 1s ease-in-out;
+                            @media only screen and(max-width: $bp-medium) {
+                                flex: 1;
+                            }
                         }
                         &__item::after {
                             z-index: 2;
@@ -146,6 +157,11 @@
                             color: var(--color-grey-light-1);
                             padding: 1.5rem 3rem;
                             display: flex;
+                            @media only screen and(max-width: $bp-medium) {
+                                justify-content: center;
+                                padding: 2rem;
+                                // min-width: 100%;
+                            }
                             // align-content: center;
                             // align-items: stretch;
                             // align-items: center;
@@ -164,6 +180,10 @@
                         color: var(--color-grey-light-4);
                         text-align: center;
                         padding: 2rem;
+                        @media only screen and(max-width: $bp-medium) {
+                            display: none;
+                            // min-width: 100%;
+                        }
                     }
                     
                     .gallery {
@@ -317,6 +337,9 @@
                             border-radius: 50%;
                             &:not(:last-child) {
                                 margin-right: -1.1rem;
+                                @media only screen and (max-width: $bp-large) {
+                                    margin-right: -2rem;
+                                }
                             }
                         }
                     }
