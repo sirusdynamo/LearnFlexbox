@@ -19,6 +19,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media only screen and(max-width: $bp-smallest) {
+                // flex-direction: column;
+                flex-wrap: wrap;
+                height: 10rem;
+            }
         }
         
         .content {
