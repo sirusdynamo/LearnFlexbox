@@ -12,11 +12,11 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        background-color: var(--color-grey-light-2);
                         @media only screen and(max-width: $bp-smallest) {
                             order: 1;
                             flex: 0 0 100%;
                             margin: 0 auto;
+                            background-color: var(--color-grey-light-2);
                         }
                         &__input {
                             font-family: inherit;
@@ -26,12 +26,12 @@
                             border: none;
                             padding: .7rem 2rem;
                             border-radius: 100px;
-                            width: 90%;
+                            width: 70%;
                             transition: 0.4s;
                             margin-right: -3rem;
                             &:focus {
                                 outline: none;
-                                width: 100%;
+                                width: 80%;
                                 background-color: var(--color-grey-light-3);
                             }
                             &::-webkit-input-placeholder {
@@ -348,13 +348,16 @@
                             height: 1rem;
                             width: 1rem;
                             // //older browsers
-                            // background-image: url(../img/chevron-thin-right.svg);
-                            // background-size: cover;
+                            background-image: url(../img/chevron-thin-right.svg);
+                            background-size: cover;
                             ///Newer brosers
-                            background-color: var(--color-primary);
-                            -webkit-mask-image: url(../img/chevron-thin-right.svg);
-                            -webkit-mask-size: cover;
-                            // margin-bottom: -1px;
+                            @supports(-webkit-mask-image: url()) or (mask-image: url()) {
+                                background-color: var(--color-primary);
+                                -webkit-mask-image: url(../img/chevron-thin-right.svg);
+                                -webkit-mask-size: cover;
+                                background-image: none;
+                                // margin-bottom: -1px;
+                            }
                         }
                     }
                     
