@@ -336,6 +336,10 @@
                         &__item {
                             margin-bottom: 0.7rem;
                             flex: 0 0 50%;
+                            @media only screen and (max-width: $bp-smallest) {
+                                flex: 0 0 100%;
+                                text-align: center;
+                            }
                         }
                         &__item::before {
                             z-index: 30;
